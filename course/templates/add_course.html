@@ -1,0 +1,46 @@
+
+
+<head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   </head>
+         
+         <style>
+                 body {
+                 margin: 0;
+                 padding: 0;
+                 font-size: 14px;
+                 font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+                 color: #333;
+                 background: #fff;
+                 font-size: 20px;
+                 
+             }
+             </style>
+   <body>
+             <div class="container">
+             <div class="list-group">
+             <form method="POST">{%csrf_token%}
+             
+                 <ul>
+                     <li class="list-group-item active">Add A New Course </li>
+                     <li class="list-group-item"><pre>Course Name       {{ form.course_title }}</pre></li>
+                     <li class="list-group-item"><pre>Course Id        {{ form.course_id }}</pre></li>
+                     <li class="list-group-item"><pre>Description          {{ form.description }}</pre></li>
+                     <li class="list-group-item"><pre>Start Date        {{ form.start_date }}</pre></li>
+                     <li class="list-group-item"><pre>End Date          {{ form.end_date }}</pre></li>
+                     <li class="list-group-item"><pre>Course Email            {{ form.course_email }}</pre></li>
+                     <li class="list-group-item"><pre>Trainer         {{ form.trainer }}</pre></li>
+                     <li class="list-group-item"><pre>Department          {{ form.department }}</pre></li>
+                     <li class="list-group-item"><pre>Lessons            {{ form.lessons }}</pre></li>
+                  </ul>
+                  <input type="submit"></input>
+
+             </form>
+             </div>
+             </div>
+   </body>

@@ -1,0 +1,49 @@
+<head>
+        <title></title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    
+    <style>
+            body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+            color: #333;
+            background: #fff;
+            font-size: 20px;
+            
+        }
+        </style>
+    
+    <body>
+    <div class="container">
+    <div class="list-group">
+    <form method="POST">{%csrf_token%}
+    
+        <ul>
+            <li class="list-group-item active">Add A New Trainer </li>
+            <li class="list-group-item"><pre>First Name       {{ form.first_name }}</pre></li>
+            <li class="list-group-item"><pre>Last Name        {{ form.last_name }}</pre></li>
+            <li class="list-group-item"><pre>Surname          {{ form.surname }}</pre></li>
+            <li class="list-group-item"><pre>Gender            {{ form.gender }}</pre></li>
+            <li class="list-group-item"><pre>Phone number       {{ form.phone_number }}</pre></li>
+            <li class="list-group-item"><pre>Staff number     {{ form.staff_number }}</pre></li>
+            <li class="list-group-item"><pre>Profession     {{ form.profession }}</pre></li>
+            <li class="list-group-item"><pre>Department     {{ form.department }}</pre></li>
+
+            <li class="list-group-item"><pre>National ID         {{ form.national_id }}</pre></li>
+            <li class="list-group-item"><pre>Marital Status      {{ form.marital_status }}</pre></li>
+            <li class="list-group-item"><pre>Location      {{ form.location_of_residence }}</pre></li>
+    
+        </ul>
+          <input type="submit"></input>
+
+    </form>
+    </div>
+    </div>
+    </body>

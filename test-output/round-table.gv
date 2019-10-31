@@ -1,0 +1,9 @@
+// LMS
+digraph {
+	A [label="Queen Shee"]
+	B [label="Sir the Wise"]
+	C [label="Queen Bee Machine"]
+	A -> B
+	A -> L
+	B -> L [constraint=false]
+}
