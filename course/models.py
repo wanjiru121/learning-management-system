@@ -10,20 +10,17 @@ class Course(models.Model):
     trainer = models.ForeignKey("trainer.Trainer",null=True,on_delete=models.CASCADE)
     department = models.ForeignKey("department.Department",null=True,on_delete=models.CASCADE)
     
-    lessons = models.ForeignKey("course.LessonPlan",null=True,on_delete=models.SET_NULL,blank=True)
-
-
     def __str__(self):
         return '{}'.format(self.course_title)
 
 
 class LessonPlan(models.Model):
+    course = models.ForeignKey("course.Course",null=True,on_delete=models.SET_NULL,blank=True)
     lesson_title = models.CharField(max_length=50)
     lesson_sub_title = models.CharField(max_length=50)
     objectives = models.TextField()
     materials_needed = models.TextField()
-    assignment = models.ForeignKey("course.Assignment",null=True,on_delete=models.SET_NULL,blank=True)
-
+    lesson_content = models.FileField(upload_to='documents/',null=True)
     def __str__(self):
         return '{}'.format(self.lesson_title)
 
@@ -31,6 +28,7 @@ class LessonPlan(models.Model):
 
 
 class Assignment(models.Model):
+    lesson = models.ForeignKey("course.LessonPlan",null=True,on_delete=models.SET_NULL,blank=True)
     type_choices = [('I','Individual'),('G','Group')]
     name = models.CharField(max_length=50)
     instructions = models.TextField()

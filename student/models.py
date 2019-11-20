@@ -11,13 +11,14 @@ class Student(models.Model):
     gender_choices = [('M','Male'),('F','Female')]
     marital_choices = [('S','Single'),('M','Married'),('W','Widowed'),('D','Divorced'),('SE','Separated'),('P','Partnered')]
     first_name = models.CharField(max_length=50, null=True)
-    last_name = models.CharField(max_length=50,null=True)
-    surname = models.CharField(max_length = 50,null=True)
+    last_name = models.CharField(max_length=50,null=True,blank=True)
+    surname = models.CharField(max_length = 50,null=True,blank=True)
     gender = models.CharField(
         choices=gender_choices,
         max_length=1,
         default=None,
         )
+    profile_picture = models.ImageField(upload_to = "profile_image",blank=True)
     date_of_birth = models.DateField(default=datetime.date.today)
     phone_number = models.CharField(max_length=15)
     registration_number = models.CharField(max_length=50)
