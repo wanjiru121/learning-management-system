@@ -159,7 +159,7 @@ img{
                     </div>
                 <br>
                 <a href="#">Institution Page</a><br>
-                <a href="profile.html">Profile</a><br>
+                <a href="profile/course/">Profile</a><br>
                 <a href="courses.html">Courses</a><br>
                 <a href="dashboard.html">Dashboard</a><br>
                 <a href="#"> Log Out</a><br>
@@ -167,10 +167,10 @@ img{
             <div class="top"></div>
 
         <div class="left-info">
-            <div class="circle2"><img src="images/malayan-tiger.jpg"></div><br>
+            <div class="circle2"><img src={{user.student.profile_picture.url}}></div><br>
             <div class="name">
-                <h6> full Name</h6>
-                <h6>User name</p>
+                <h6> {{user.first_name}} {{user.last_name}}</h6>
+                <h6>{{user}}</p>
                     <hr>
                 <h6>Program</h6>
                 <p>Information Technology</p>
@@ -179,13 +179,13 @@ img{
                 <p>Main Campus</p>
                 <hr>
                 <h6>Admission Number</h6>
-                <p>SB01/SR/MN/1901/2016</p>
+                <p>{{user.student.registration_number}}</p>
                 <hr>
                 <h6>Phone Number</h6>
-                <p>0797564719</p>
+                <p>{{user.student.phone_number}}</p>
                 <hr>
                 <h6>Email</h6>
-                <p>rosewanjiru@gmail.com</p>
+                <p>{{user.email}}</p>
             </div>   
             
         </div>
