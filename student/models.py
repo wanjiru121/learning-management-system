@@ -27,7 +27,11 @@ class Student(models.Model):
     parent_or_guardian = models.CharField(max_length=50)
     location_of_birth = models.CharField(max_length=100)
     courses = models.ManyToManyField(Course,blank=True)
-    
+
+    image_1 = models.ImageField(upload_to = "profile_image",blank=True)
+    image_2 = models.ImageField(upload_to = "profile_image",blank=True)
+    image_3 = models.ImageField(upload_to = "profile_image",blank=True)
+
 
     def __str__(self):
         return '{} {}'.format(self.first_name,self.last_name)

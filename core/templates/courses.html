@@ -160,19 +160,20 @@ img{
                     <a>F.L.E.X</a>
     
                         <div class="circle">
-                            <img src="images/malayan-tiger.jpg">
+                            <img src={{user.student.profile_picture.url}}>
                         </div>
                     <br>
                     <a href="#">Institution Page</a><br>
-                    <a href="profile.html">Profile</a><br>
-                    <a href="courses.html">Courses</a><br>
-                    <a href="dashboard.html">Dashboard</a><br>
+                    <a href="{% url 'student_profile' %}">Profile</a><br>
+                    <a href="{% url 'course_profile' %}">Courses</a><br>
+                    <a href="{% url 'dashboard_profile' %}">Dashboard</a><br>
                     <a href="#"> Log Out</a><br>
                 </div>
 
                 <div class="main">
                     <div class="whitediv">
                         <div class="crunch"></div>
+                        
                         <div class="basics"><h3>Crunch Basics</h3></div>
                              
                             <div class="details">
@@ -227,24 +228,24 @@ img{
       
                                 <div class="wd">
                                     <div class="wdc">
-                                            <img src="images/malayan-tiger.jpg">
+                                            <img src={{user.student.image_3.url}}>
                                     </div><p style="margin-left: 30px; float: left;">Crunch Basics</p>
                                     </div>
                                     <div class="wd">
                                             <div class="wdc">
-                                                    <img src="images/malayan-tiger.jpg">
+                                                    <img src={{user.student.image_3.url}}>
                                                 </div><p style="margin-left: 30px; float: left;">Crunch loops</p>
                                         </div>
 
                                         <div class="wd">
                                                 <div class="wdc">
-                                                        <img src="images/malayan-tiger.jpg">
+                                                        <img src={{user.student.image_3.url}}>
                                                     </div><p style="margin-left: 30px; float: left;">Crunch Branching</p>
                                             </div>
 
                                             <div class="wd">
                                                     <div class="wdc">
-                                                            <img src="images/malayan-tiger.jpg">
+                                                            <img src={{user.student.image_3.url}}>
                                                         </div><p style="margin-left: 30px; float: left;">Crunch </p>
                                                 </div>
                         </div>

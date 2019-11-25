@@ -140,13 +140,13 @@ img{
                         <a style="color: white;">F.L.E.X</a>
         
                             <div class="circle">
-                                <img src="images/malayan-tiger.jpg">
+                                <img src={{user.student.profile_picture.url}}>
                             </div>
                         <br>
                         <a href="#">Institution Page</a><br>
-                        <a href="profile.html">Profile</a><br>
-                        <a href="courses.html">Courses</a><br>
-                        <a href="dashboard.html">Dashboard</a>
+                    <a href="{% url 'student_profile' %}">Profile</a><br>
+                    <a href="{% url 'course_profile' %}">Courses</a><br>
+                    <a href="{% url 'dashboard_profile' %}">Dashboard</a><br>
                         <a href="#"> Log Out</a><br>
                     </div>
         </div>
@@ -221,7 +221,7 @@ img{
                                         <p>Your recent courses</p>
                                         <div class="mycourses">
                                             <div style="float: left; margin: 11px;">
-                                                    <img src="images/html.png" style="width: 100px; height: 50px; ">
+                                                    <img src={{user.student.image_1.url}} style="width: 100px; height: 50px; ">
                                                 
                                             </div>
                                             <div style="float: left; margin: 11px;">
@@ -239,7 +239,7 @@ img{
                                         <div class="mycourses">
 
                                                 <div style="float: left; margin: 11px;">
-                                                        <img src="images/js.png" style="width: 100px; height: 50px; ">
+                                                        <img src={{user.student.image_2.url}} style="width: 100px; height: 50px; ">
                                                     
                                                 </div>
                                                 <div style="float: left; margin: 11px;">
@@ -257,7 +257,7 @@ img{
                                         <div class="mycourses">
 
                                                 <div style="float: left; margin: 11px;">
-                                                        <img src="images/java.jpg" style="width: 100px; height: 50px; ">
+                                                        <img src={{user.student.image_3.url}} style="width: 100px; height: 50px; ">
                                                     
                                                 </div>
                                                 <div style="float: left; margin: 11px;">

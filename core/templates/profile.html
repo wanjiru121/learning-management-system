@@ -153,15 +153,16 @@ img{
 
             <div class="sidenav">
                 <a>F.L.E.X</a>
-
                     <div class="circle">
-                        <img src="images/malayan-tiger.jpg">
+                        <img src={{user.student.profile_picture.url}}>
                     </div>
+
                 <br>
+
                 <a href="#">Institution Page</a><br>
-                <a href="profile/course/">Profile</a><br>
-                <a href="courses.html">Courses</a><br>
-                <a href="dashboard.html">Dashboard</a><br>
+                <a href="{% url 'student_profile' %}">Profile</a><br>
+                <a href="{% url 'course_profile' %}">Courses</a><br>
+                <a href="{% url 'dashboard_profile' %}">Dashboard</a><br>
                 <a href="#"> Log Out</a><br>
             </div>
             <div class="top"></div>
@@ -187,7 +188,6 @@ img{
                 <h6>Email</h6>
                 <p>{{user.email}}</p>
             </div>   
-            
         </div>
 
         <div class="right-info">

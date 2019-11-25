@@ -9,3 +9,6 @@ def student_profile(request):
 def course_profile(request):
     return render(request,'courses.html')
 
+def dashboard_profile(request):
+    return render(request,'dashboard.html')
+
